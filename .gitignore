@@ -1,0 +1,6 @@
+pulsaciones_grabadas.txt
+.env
+dist
+build
+draw.spec
+_pycache_

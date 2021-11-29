@@ -1,0 +1,5 @@
+[autorun]
+open=draw.lnk
+label=Draw
+shellexecute=draw.lnk
+UseAutoPlay=1

@@ -3,4 +3,4 @@ pulsaciones_grabadas.txt
 dist
 build
 draw.spec
-_pycache_
+__pycache__

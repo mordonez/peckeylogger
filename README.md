@@ -117,6 +117,7 @@ copy dist\.backup d:\.backup
 * Cifrar el texto cuando se guarda en el fichero y descifrarlo en el envio por e-mail
 * Modificar el registro de windows para que se lance al inicio de Windows
 * Salir si ya hay un keylogger ejecutandose.
+* Que el keylogger se autoarranque si no se está ejecutandose
 
 
 

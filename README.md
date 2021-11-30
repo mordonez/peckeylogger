@@ -1,4 +1,4 @@
-# Instalador de un keylogger en una victima Windows
+# Instalador de un keylogger en una víctima Windows
 
 Este proyecto está desarrollado solo para fines educativos.
 

@@ -8,7 +8,7 @@ Crear un instalador que instala una "app" ficticia de dibujo pero a la vez el in
 
 El keylogger guarda todos los registros de teclado en un fichero y cada 2 horas envía por e-mail todo lo registrado. Se utiliza la librería [Sendgrid](https://sendgrid.com/solutions/email-api/) (Requiere una cuenta)
 
-Para salir del keylogger la victima puede teclear una combinación de teclas `<ctrl>+<alt>+q`
+Para salir del keylogger la víctima puede teclear una combinación de teclas `<ctrl>+<alt>+q`
 ## Ejemplo: Crear el ejecutable
 
 Se utiliza [pyinstaller](https://www.pyinstaller.org/) que permite embeber un proyecto pyhton en un .exe

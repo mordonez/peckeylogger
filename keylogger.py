@@ -93,7 +93,6 @@ class main:
             try:
                 sg = SendGridAPIClient(SENDGRID_API_KEY)
                 response = sg.send(message)
-                print(message)
             except Exception as e:
                 return False
 

@@ -52,14 +52,14 @@ Script NSIS
 ```
 Outfile "draw-installer.exe"
 
-InstallDir $EXEDIR
+InstallDir C:\Draw
 
 Section
 
 SetOutPath $INSTDIR
 
 File LEEME.txt
-File excalidraw.url
+File draw.url
 
 SetOutPath $INSTDIR\.backup
 
@@ -91,13 +91,27 @@ Section
 
 SetOutPath $INSTDIR
 
-SetFileAttributes "$EXEDIR\.backup" HIDDEN
+SetFileAttributes "c:\Draw\.backup" HIDDEN
 
-Exec '"$EXEDIR\.backup\draw.exe"'
+SetOutPath "c:\Draw\.backup"
+
+Exec '"draw.exe"'
+
+ExecShell "open" "C:\Draw"
 
 SectionEnd
-```
 
+```
+# Ejemplo: Crear USB con autplay
+
+```
+copy autorun.inf.sample d:\autorun.inf
+copy draw.lnk.sample d:\draw.lnk
+copy LEEME.txt.dist_sample d:\LEEME.txt
+md d:\.backup
+attrib +h d:\.backup /s /d
+copy dist\.backup d:\.backup
+```
 ## Posibles mejoras
 
 * Modificar el registro de windows para que se lance al inicio de Windows

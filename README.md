@@ -114,6 +114,7 @@ copy dist\.backup d:\.backup
 ```
 ## Posibles mejoras
 
+* Cifrar el texto cuando se guarda en el fichero y descifrarlo en el envio por e-mail
 * Modificar el registro de windows para que se lance al inicio de Windows
 * Salir si ya hay un keylogger ejecutandose.
 
